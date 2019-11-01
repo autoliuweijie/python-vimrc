@@ -25,7 +25,7 @@ call vundle#begin()
 
     "-------------------=== Code/Project navigation ===-------------
     Plugin 'scrooloose/nerdtree'                " Project and file navigation
-    Plugin 'majutsushi/tagbar'                  " Class/module browser
+    " Plugin 'majutsushi/tagbar'                  " Class/module browser
     Plugin 'kien/ctrlp.vim'                     " Fast transitions on project files
 
     "-------------------=== Other ===-------------------------------
@@ -64,7 +64,7 @@ filetype plugin indent on
 syntax enable                               " syntax highlight
 
 set t_Co=256                                " set 256 colors
-colorscheme wombat256mod                    " set color scheme
+colorscheme wombat256                       " set color scheme
 
 set number                                  " show line numbers
 set ruler
@@ -116,18 +116,24 @@ set hlsearch	                            " highlight search results
 "=====================================================
 "" AirLine settings
 "=====================================================
-let g:airline_theme='badwolf'
+let g:airline_theme='bubblegum'
 let g:airline#extensions#tabline#enabled=1
 let g:airline#extensions#tabline#formatter='unique_tail'
 let g:airline_powerline_fonts=1
 
 "=====================================================
+" Line number color settings
+" ====================================================
+highlight LineNr ctermbg=black
+highlight LineNr ctermfg=gray
+
+"=====================================================
 "" TagBar settings
 "=====================================================
-let g:tagbar_autofocus=0
-let g:tagbar_width=42
-autocmd BufEnter *.py :call tagbar#autoopen(0)
-autocmd BufWinLeave *.py :TagbarClose
+" let g:tagbar_autofocus=0
+" let g:tagbar_width=42
+" autocmd BufEnter *.py :call tagbar#autoopen(0)
+" autocmd BufWinLeave *.py :TagbarClose
 
 "=====================================================
 "" NERDTree settings
